@@ -58,6 +58,7 @@ h6 {
     color: inherit;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
+    text-align: center;
 }
 
 h1 a,
@@ -641,7 +642,7 @@ input[type="button"].medium,
 
 #copyright {
     color: #ddd;
-    color: rgba(255, 255, 255, 0.2) !important;
+    color: #002170 !important;
     text-align: center;
     display: block;
     padding: 3em 0em;
@@ -650,7 +651,7 @@ input[type="button"].medium,
 #copyright a {
     text-decoration: none;
     color: #ddd;
-    color: rgba(255, 255, 255, 0.4) !important;
+    color: #004cff !important;
 }
 
 
@@ -668,9 +669,21 @@ input[type="button"].medium,
 
 /* Buttons */
 
-
-
 img {
     max-width: 100%;
     max-height: 85%;
+}
+
+iframe {
+    margin: 0 25%;
+    width: 50%;
+    border: 3px solid #410091;
+}
+
+#jh {
+    color: #eee;
+    margin-bottom: 30px;
+    font-size: xx-large;
+    text-align: center;
+
 }
