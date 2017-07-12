@@ -1,0 +1,2 @@
+   var html = '<iframe title="YouTube video player" class="youtube-player" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/' + id + '" frameborder="0" allowFullScreen></iframe>'
+   $('body').append(html);
