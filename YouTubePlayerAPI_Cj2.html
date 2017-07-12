@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> You Tube Test</title>
+  <style>
+    
+    * {
+      background-color: white;
+      color: black;
+      font-size: 19px;
+    }
+
+  </style>
+</head>
+  <body>
+
+  
+    <!-- YOUT TUBE NOTE: 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <div id="player"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+
+          // Global Variables Used As Input For Our Ajax Parameters
+
+          //var q = "JavaScript";
+          //var maxResults = 6;
+             
+          // var vidWidth = 640;
+          // var vidHeight = 390;
+          // var pId;
+
+
+          // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+          // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+          // OPTION #1: You Tube Data API's Search List API Call
+          // var url = 'https://www.googleapis.com/youtube/v3/search';
+
+          //   url += '?' + $.param({
+          //       'part': 'snippet',
+          //       'key': 'AIzaSyBosREDOI_AxtNcHkvK--los4AS_CbUnhM',
+          //       'q': q,
+          //       'maxResults': maxResults
+          //   });
+
+
+          //   $.ajax({
+          //       type: "GET",
+          //       url: url
+          //   }).done(function(result) {
+
+          //       console.log(result);              
+               
+
+
+          //       //  Takes The JSON Result/Response, Gets A VideoId, Creates An Iframe For The Video 
+          //       //  AND Embeds The Iframe-Video In Our HTML
+          //       for (var i = 0; i < maxResults; i++){
+
+          //         var videoId = result.items[i].id.videoId;
+                                  
+          //         console.log(videoId);
+
+          //         var html = '<li><iframe title="YouTube video player" class="youtube-player" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/' + videoId + '" frameborder="0" allowFullScreen></iframe></li>';
+   
+          //         $('#player').append(html);
+          //       }
+          //   });
+
+
+      function channelCall (){
+
+                // OPTION #1: You Tube Data API's channel List API Call
+                var url = 'https://www.googleapis.com/youtube/v3/channels';
+
+                  url += '?' + $.param({
+                      'part': 'snippet,contentDetails',
+                      'key': 'AIzaSyBosREDOI_AxtNcHkvK--los4AS_CbUnhM',
+                      'forUsername': 'TechGuyWeb'
+                  });
+
+
+                  $.ajax({
+                      type: "GET",
+                      url: url
+                  }).done(function(result) {
+                      
+                      console.log("ChannelId from the Channel Api Call Result/Response >>>>>>>>>>>>>>");
+                      console.log(result.items[0].id);              
+                      
+                      var channelId = result.items[0].id;
+
+                      function playlistCall(){
+
+                          var url = 'https://www.googleapis.com/youtube/v3/playlists';
+
+                          url += '?' + $.param({
+                              'part': 'snippet,contentDetails,player',
+                              'key': 'AIzaSyBosREDOI_AxtNcHkvK--los4AS_CbUnhM',
+                              'channelId': channelId
+                          }); 
+
+                          $.ajax({
+                              type: "GET",
+                              url: url
+                          }).done(function(result){
+                              
+                              console.log("PlaylistId from the Playlist Api Call Result/Response >>>>>>>>>>>>>>");
+                              console.log(result.items[0].id);
+                              //  Takes The JSON Result/Response, Gets A playlistId, Creates An Iframe For The playlist
+                              //  AND Embeds The Iframe-Video In this html page
+
+                                var playlistId = result.items[0].id;
+
+                                var html = '<li><iframe title="YouTube video player" class="youtube-player" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/videoseries?list='+ playlistId + '" frameborder="0" allowFullScreen></iframe></li>'; 
+                 
+                                $('#player').append(html);
+                          });  
+                      }
+
+                      playlistCall();
+                  });
+      }
+
+      channelCall();
+  
+              // $('#javascriptvideos').append();
+              // $('#phpvideos').append();
+              // $('#pythonvideos').append();
+              // $('#rubyvideos').append();
+              // $('#sqlvideos').append();  
+              // $('#cvideos').append(); 
+
+    </script>
+  </body>
+</html>
