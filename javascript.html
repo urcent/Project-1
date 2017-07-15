@@ -1,29 +1,18 @@
 <!DOCTYPE HTML>
-<!--
-    Phase Shift by TEMPLATED
-    templated.co @templatedco
-    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
 <html>
-
 <head>
-    <meta name="google-site-verification" content="K2ZLqRl1bgihn32zqGgCgwujCBcZTPr5QMm7qIqFkjQ" />
-    <title>Banzai Assassins</title>
+
+<!-- Google Site OAuth Verification Required The Inclusion Of The Following Meta Tag BUT OAuth Was Not Used  -->
+<!-- <meta name="google-site-verification" content="K2ZLqRl1bgihn32zqGgCgwujCBcZTPr5QMm7qIqFkjQ" />  -->
+
+    <title>Learn To Code - JavaScript Tutorials</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.dropotron.min.js"></script>
-    <script src="js/skel.min.js"></script>
-    <script src="js/skel-layers.min.js"></script>
-    <script src="js/init.js"></script>
-    <script type="text/javascript" src="js/api_js.js"></script>
-    <script type="text/javascript" src="js/api.js"></script>
+    <meta name="description" content="A Step-By-Step Guide For Learning Code & Promoting You Skills As A Coder" />
+    <meta name="keywords" content="Learn To Code, Coding Tutorials, Code Tutorials" />
+
     <noscript>
-        <link rel="stylesheet" type="text/css" href="css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="css/reset.css" disable /
         <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <link rel="stylesheet" type="text/css" href="css/style-wide.css" />
     </noscript>
     <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 </head>
@@ -34,170 +23,44 @@
         <!-- Header -->
         <div id="header" class="skel-panels-fixed">
             <div id="logo">
-                <h1><a href="index.html">Youtube Stuff</a></h1>
-                <span class="tag">by Banzai Assassins</span>
+                <h1><a href="index.html">Learn to Code!</a></h1>
+                <span class="tag">by Bonzai Assassins</span>
             </div>
             <nav id="nav">
                 <ul>
-                    <li class="active"><a href="index.html">Homepage</a></li>
-                    
+                    <li class="active "><span><a href="introtocoding.html">Intro To Coding</a></span></li>
+                    <li class="active"><span><a href="codinglanguages.html">Coding Languages</a></span></li>
+                    <li class="active"><span><a href="careerresources.html">Career Resources</a></span></li>
+                    <li class="active"><span><a href="contactus.html">Contact Bonzai Assassins.org</a></span></li>
                 </ul>
             </nav>
         </div>
 
+        <!-- Text Above The Main Content Area -->
         <div id="jh">JavaScript!</div>
-        <!-- Extra -->
-        <div id="javascriptvideos">
-        </div>
-        
-        <!-- Copyright -->
-        <div id="copyright">
+
+        <!-- Videos From API Call Response Will Be Rendered Here -->
+        <div id="javascriptvideos"></div>
+
+        <!-- Signature of Our Organization -->
+        <div id="signature">
             <div class="container">
-                <div class="copyright">
-                    <p>Design: <a href="placeholder.com">Banzai Assassins</a> </p>
-                    <ul class="icons">
-                        <li><a href="#" class="fa fa-facebook"><span>Facebook</span></a></li>
-                        <li><a href="#" class="fa fa-twitter"><span>Twitter</span></a></li>
-                        <li><a href="#" class="fa fa-google-plus"><span>Google+</span></a></li>
-                    </ul>
+                <div class="signature">
+                    <p>Design: <a href="contactus.html">Bonzai Assassins</a></p>
                 </div>
             </div>
         </div>
+    </div>
 
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-
-          // Global Variables Used As Input For Our Ajax Parameters
-
-          //var q = "JavaScript";
-          //var maxResults = 6;
-             
-          // var vidWidth = 640;
-          // var vidHeight = 390;
-          // var pId;
-
-
-          // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-          // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-          // OPTION #1: You Tube Data API's Search List API Call
-          // var url = 'https://www.googleapis.com/youtube/v3/search';
-
-          //   url += '?' + $.param({
-          //       'part': 'snippet',
-          //       'key': 'AIzaSyBosREDOI_AxtNcHkvK--los4AS_CbUnhM',
-          //       'q': q,
-          //       'maxResults': maxResults
-          //   });
-
-
-          //   $.ajax({
-          //       type: "GET",
-          //       url: url
-          //   }).done(function(result) {
-
-          //       console.log(result);              
-               
-
-
-          //       //  Takes The JSON Result/Response, Gets A VideoId, Creates An Iframe For The Video 
-          //       //  AND Embeds The Iframe-Video In Our HTML
-          //       for (var i = 0; i < maxResults; i++){
-
-          //         var videoId = result.items[i].id.videoId;
-                                  
-          //         console.log(videoId);
-
-          //         var html = '<li><iframe title="YouTube video player" class="youtube-player" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/' + videoId + '" frameborder="0" allowFullScreen></iframe></li>';
-   
-          //         $('#player').append(html);
-          //       }
-          //   });
-
-
-      function channelCall (){
-
-                // OPTION #1: You Tube Data API's channel List API Call
-                var url = 'https://www.googleapis.com/youtube/v3/channels';
-
-                  url += '?' + $.param({
-                      'part': 'snippet,contentDetails',
-                      'key': 'AIzaSyBosREDOI_AxtNcHkvK--los4AS_CbUnhM',
-                      'forUsername': 'TechGuyWeb'
-                  });
-
-
-                  $.ajax({
-                      type: "GET",
-                      url: url
-                  }).done(function(result) {
-                      
-                      console.log("ChannelId from the Channel Api Call Result/Response >>>>>>>>>>>>>>");
-                      console.log(result.items[0].id);              
-                      
-                      var channelId = result.items[0].id;
-
-                      function playlistCall(){
-
-                          var url = 'https://www.googleapis.com/youtube/v3/playlists';
-
-                          url += '?' + $.param({
-                              'part': 'snippet,contentDetails,player',
-                              'key': 'AIzaSyBosREDOI_AxtNcHkvK--los4AS_CbUnhM',
-                              'channelId': channelId,
-                              'maxResults': 50 // The You Tube Data API Call Only Allows Up To 50 Results
-                          }); 
-
-                          $.ajax({
-                              type: "GET",
-                              url: url
-                          }).done(function(result){
-
-                              
-                              // Console Log The Whole Response To See All Of The Playlists For This Channel
-                              console.log("ALL of The Playlists From The Playlist Api Call Result/Response >>>>>>>>>>>>>>");
-                              console.log(result);
-
-
-                              // Console Log The HTML & CSS Playlist
-                              // Takes The JSON Result/Response, Gets A playlistId For The HTML & CSS Lesson/Playlist, 
-                              // Creates An Iframe For The Playlist 
-
-                              console.log("HTML & CSS PlaylistId from the Playlist Api Call Result/Response >>>>>>>>>>>>>>");
-                              console.log(result.items[14].snippet.title + ":" + result.items[14].id);
-
-                              var playlistId1 = result.items[14].id;
-
-                              var playlist1HTML = '<li><iframe title="YouTube video player" class="youtube-player" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/videoseries?list='+ playlistId1 + '" frameborder="0" allowFullScreen></iframe></li><br/>'; 
-                 
-
-                              // Console Log The Jquery Playlist
-                              // Takes The JSON Result/Response, Gets A playlistId For The Jquery Lesson/Playlist, 
-                              // Creates An Iframe For The Playlist 
-
-                              console.log("Jquery PlaylistId from the Playlist Api Call Result/Response >>>>>>>>>>>>>>");
-                              console.log(result.items[15].snippet.title + ":" + result.items[15].id);
-
-                              var playlistId2 = result.items[15].id;
-                              var playlist2HTML = '<li><iframe title="YouTube video player" class="youtube-player" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/videoseries?list='+ playlistId2 + '" frameborder="0" allowFullScreen></iframe></li>'; 
-
-
-                              // Takes The Playlist Iframes We Created An Renders Them To The HMTL Page 
-                              var finalHTML = playlist1HTML + playlist2HTML;
-
-                                $('#javascriptvideos').append(finalHTML);
-                          });  
-                      }
-
-                      playlistCall();
-                  });
-      }
-
-      channelCall();
-  
-    </script>
+<!-- Script Files -->
+<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.dropotron.min.js"></script>
+<script src="js/skel.min.js"></script>
+<script src="js/skel-layers.min.js"></script>
+<script src="js/init.js"></script>
+<script type="text/javascript" src = "js/javascript.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </body>
-
 </html>

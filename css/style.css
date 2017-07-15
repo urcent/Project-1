@@ -1,5 +1,12 @@
+/*
+    Phase Shift by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+*/
+
 @import url("font-awesome.min.css");
-@import url("http://fonts.googleapis.com/css?family=Raleway:100,200,300,500,600,700,800,900");
+@import url("http://fonts.googleapis.com/css?family=Bad+Script");
+
 
 /* Basic */
 
@@ -13,15 +20,15 @@ input,
 select,
 textarea {
     color: #bebdea;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Bad Script', cursive, sans-serif;
     font-size: 12pt;
     font-weight: 300;
     line-height: 1.65em;
 }
 
 a {
-    color: #d84780;
-    text-decoration: underline;
+    color: white;
+/*    text-decoration: underline;*/
 }
 
 strong,
@@ -56,7 +63,7 @@ h6 {
     margin: 0;
     padding: 0;
     color: inherit;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Bad Script', cursive, sans-serif;
     font-weight: 700;
     text-align: center;
 }
@@ -73,6 +80,7 @@ h6 a {
 
 h2 {
     font-size: 1.5em;
+    font-size: 35px;
 }
 
 h3 {
@@ -103,6 +111,15 @@ blockquote {
     padding: 1em 0 1em 2em;
 }
 
+
+#maincontent-homepage {
+  margin: 0 auto;
+}
+
+#maincontent {
+  margin-left: 200px;
+}
+
 section.special,
 article.special {
     text-align: center;
@@ -130,13 +147,13 @@ header.major .byline {
     font-weight: 300;
 }
 
-footer >:last-child {
+/*footer >:last-child {
     margin-bottom: 0;
 }
 
 footer.major {
     padding-top: 3em;
-}
+}*/
 
 
 /* Form */
@@ -249,6 +266,21 @@ input[type="email"] {
     margin: auto;
 }
 
+.mainpageimg {
+    display: block;
+    width: 100%;
+    margin: 0 0 2em 0;
+    position: static;
+    display: block;
+    height: 300px;
+}
+
+.centerGitHub {
+    margin-top: 50px;
+    margin-left: 420px;
+}
+
+}
 
 /* Icon */
 
@@ -533,7 +565,7 @@ input[type="button"].medium,
     left: 0;
     width: 100%;
     background: #0F1116;
-    color: #fff;
+    color: white;
     padding: 1.25em 1.25em 1.25em 1.25em;
     z-index: 100;
 }
@@ -639,17 +671,18 @@ input[type="button"].medium,
 }
 
 
-/* Copyright */
+/* Signature */
 
-#copyright {
+#signature {
     color: #ddd;
     color: #002170 !important;
     text-align: center;
     display: block;
     padding: 3em 0em;
+    font-size: 35px;
 }
 
-#copyright a {
+#signature a {
     text-decoration: none;
     color: #ddd;
     color: #004cff !important;
@@ -657,6 +690,17 @@ input[type="button"].medium,
 
 
 /* Box */
+
+.mainpagebox {
+    padding: 3em 2em;
+    background: transparent;
+    text-align: center;
+    border-radius: 15px 50px;
+    height: 410px;
+    width: 600px;
+    margin: 0px;
+}
+
 
 .box {
     padding: 3em 2em;
@@ -667,8 +711,18 @@ input[type="button"].medium,
     width: 300px;
 }
 
+.marginadjustment {
+  margin-top: 100px;
+  margin-left: 420px;
+}
+
+
 
 /* Buttons */
+
+.widerbutton {
+  width: 320px;
+}
 
 img {
     max-width: 100%;
